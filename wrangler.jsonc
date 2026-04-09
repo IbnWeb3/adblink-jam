@@ -1,0 +1,27 @@
+     1|{
+     2|  "$schema": "node_modules/wrangler/config-schema.json",
+     3|  "name": "app",
+     4|  "main": ".open-next/worker.js",
+     5|  "compatibility_date": "2026-01-07",
+     6|  "compatibility_flags": [
+     7|    "nodejs_compat"
+     8|  ],
+     9|  "observability": {
+    10|    "enabled": true,
+    11|    "logs": {
+    12|      "enabled": true,
+    13|      "invocation_logs": true
+    14|    },
+    15|    "traces": {
+    16|      "enabled": true
+    17|    }
+    18|  },
+    19|  "upload_source_maps": true,
+    20|  "assets": {
+    21|    "directory": ".open-next/assets",
+    22|    "binding": "ASSETS"
+    23|  },
+    24|  "vars": {
+    25|    "NEXT_PUBLIC_PROGRAM_ID": "BPw6hyaYnmVu2F2JbND5KKss3jYuW9b6jkozfBFGhVx3"
+    26|  }
+    27|}
