@@ -1,0 +1,103 @@
+     1|/* Tailwind v4 - config lives here only. There is no tailwind.config.js. */
+     2|@import "tailwindcss";
+     3|
+     4|:root {
+     5|	color-scheme: dark;
+     6|	/* Ad-Blink brand: deep space background, purple primary, amber accent */
+     7|	--background: 250 15% 4%;
+     8|	--foreground: 220 15% 95%;
+     9|	--card: 248 14% 7%;
+    10|	--card-foreground: 220 15% 95%;
+    11|	--primary: 262 83% 58%;        /* purple-600 #7C3AED */
+    12|	--primary-foreground: 0 0% 100%;
+    13|	--secondary: 30 95% 53%;       /* amber/orange #f97316 */
+    14|	--secondary-foreground: 0 0% 100%;
+    15|	--muted: 248 14% 13%;
+    16|	--muted-foreground: 220 8% 52%;
+    17|	--accent: 30 95% 53%;
+    18|	--accent-foreground: 0 0% 100%;
+    19|	--destructive: 0 72% 51%;
+    20|	--destructive-foreground: 0 0% 98%;
+    21|	--border: 248 14% 17%;
+    22|	--input: 248 14% 10%;
+    23|	--ring: 262 83% 58%;
+    24|	--radius: 0.625rem;
+    25|}
+    26|
+    27|@theme {
+    28|	--color-background: hsl(var(--background));
+    29|	--color-foreground: hsl(var(--foreground));
+    30|	--color-card: hsl(var(--card));
+    31|	--color-card-foreground: hsl(var(--card-foreground));
+    32|	--color-primary: hsl(var(--primary));
+    33|	--color-primary-foreground: hsl(var(--primary-foreground));
+    34|	--color-secondary: hsl(var(--secondary));
+    35|	--color-secondary-foreground: hsl(var(--secondary-foreground));
+    36|	--color-muted: hsl(var(--muted));
+    37|	--color-muted-foreground: hsl(var(--muted-foreground));
+    38|	--color-accent: hsl(var(--accent));
+    39|	--color-accent-foreground: hsl(var(--accent-foreground));
+    40|	--color-destructive: hsl(var(--destructive));
+    41|	--color-destructive-foreground: hsl(var(--destructive-foreground));
+    42|	--color-border: hsl(var(--border));
+    43|	--color-input: hsl(var(--input));
+    44|	--color-ring: hsl(var(--ring));
+    45|	--radius-sm: calc(var(--radius) - 2px);
+    46|	--radius-md: var(--radius);
+    47|	--radius-lg: calc(var(--radius) + 4px);
+    48|	--font-sans: var(--font-inter, 'Inter', ui-sans-serif, system-ui, sans-serif);
+    49|	--font-mono: ui-monospace, SFMono-Regular, monospace;
+    50|}
+    51|
+    52|/* Gradient hero glow keyframe */
+    53|@keyframes gradientShift {
+    54|	0%   { background-position: 0% 50%; }
+    55|	50%  { background-position: 100% 50%; }
+    56|	100% { background-position: 0% 50%; }
+    57|}
+    58|
+    59|.adblink-hero-gradient {
+    60|	background: linear-gradient(135deg, #0f0a1e 0%, #1a0a3a 30%, #1a0f0a 70%, #0a0f1a 100%);
+    61|	background-size: 300% 300%;
+    62|	animation: gradientShift 12s ease infinite;
+    63|}
+    64|
+    65|/* Spinner for loading buttons */
+    66|@keyframes spin {
+    67|	to { transform: rotate(360deg); }
+    68|}
+    69|.spinner {
+    70|	display: inline-block;
+    71|	width: 0.9rem;
+    72|	height: 0.9rem;
+    73|	border: 2px solid rgba(255,255,255,0.3);
+    74|	border-top-color: #fff;
+    75|	border-radius: 50%;
+    76|	animation: spin 0.7s linear infinite;
+    77|	vertical-align: middle;
+    78|	margin-right: 0.4rem;
+    79|}
+    80|
+    81|@layer base {
+    82|	* {
+    83|		box-sizing: border-box;
+    84|	}
+    85|
+    86|	html {
+    87|		font-family: var(--font-sans);
+    88|	}
+    89|
+    90|	body {
+    91|		margin: 0;
+    92|		background-color: var(--color-background);
+    93|		color: var(--color-foreground);
+    94|		-webkit-font-smoothing: antialiased;
+    95|		-moz-osx-font-smoothing: grayscale;
+    96|	}
+    97|
+    98|	a {
+    99|		color: inherit;
+   100|		text-decoration: none;
+   101|	}
+   102|}
+   103|
